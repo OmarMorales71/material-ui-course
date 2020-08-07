@@ -1,14 +1,14 @@
 import React from "react";
 import MakeTheme from "./classes/MakeTheme";
 import DarkMode from "./classes/DarkMode";
-import GridExample from "./classes/GridExample";
+import GridExample2 from "./classes/GridExample2";
 
 
 
 function App() {
   
   return (
-    <GridExample />
+    <GridExample2 />
   );
 }
 
