@@ -6,6 +6,8 @@ import OutlinedCard from "./classes/OutlinedCard";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import TableExample from "./classes/TableExample";
+import TabsExample from "./classes/TabsExample";
+import {Switch, Route, Redirect} from 'react-router-dom'
 
 const useStyles = makeStyles({
   gridContainer: { paddingLeft: "40px", paddingRight: "40px" },
@@ -14,7 +16,10 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   return (
-    <TableExample />
+    <Switch>
+      <Redirect exact from="/home" to="/home/about" />
+      <Route exact path="/home/:page?" render={props=> <TabsExample {...props} />} />
+    </Switch>
   );
 }
 
