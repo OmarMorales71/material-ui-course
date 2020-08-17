@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TableExample from "./classes/TableExample";
 import TabsExample from "./classes/TabsExample";
 import {Switch, Route, Redirect} from 'react-router-dom'
+import TablePaginationExample from "./classes/TablePaginationExample";
 
 const useStyles = makeStyles({
   gridContainer: { paddingLeft: "40px", paddingRight: "40px" },
@@ -19,6 +20,8 @@ function App() {
     <Switch>
       <Redirect exact from="/home" to="/home/about" />
       <Route exact path="/home/:page?" render={props=> <TabsExample {...props} />} />
+      <Route exact path="/pagination" render={props=> <TablePaginationExample {...props} />} />
+      
     </Switch>
   );
 }
